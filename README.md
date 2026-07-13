@@ -14,15 +14,13 @@
 
 
 <p align="center">
-  <img src="figs/pipeline_v2.png" width="90%"/>
-  <br/><sub><b>Figure 1.</b> Comparison of post-training pipelines. (a) Serial: Sequential domain exploration, risking catastrophic forgetting. (b) Parallel: Parallel domain exploration followed by unified policy alignment. (c) Proxy Asynchronous (Ours): A proxy model conducts asynchronous exploration; extracted signals are subsequently transferred to various primary models. Decoupling these update signals from the base model enables seamless propagation and reuse. </sub>
+  <img src="assets/pipeline_v2.png" width="90%"/>
 </p>
 
 ## ⚙️ Method
 
 <p align="center">
-  <img src="figs/method.png" width="85%"/>
-  <br/><sub><b>Figure 3.</b> Illustration of the PUST mechanism. This pipeline decouples exploration from alignment via three sequential stages. First, a relative update signal is extracted from the explored proxy model pair. Next, to prevent over-updating, the signal is dynamically calibrated against the primary model's anchor. Finally, the calibrated signal is transferred to guide the primary model's alignment, ensuring stable and flexible policy optimization.</sub>
+  <img src="assets/method.png" width="90%"/>
 </p>
 
 PUST extracts the relative improvement between the initial and optimized proxy policies:
@@ -52,28 +50,23 @@ Evaluated with Qwen3 models on DeepMath-103K (math) and Eurus-RL-Code (code):
 - **Multi-hop transfer:** signals remain useful across sequences such as 4B → 1.7B → 8B.
 
 <p align="center">
-  <img src="figs/table1_math.png" width="95%"/>
-  <br/><sub><b>Table 1.</b> Math benchmarks (Mean@16).</sub>
+  <img src="assets/table1_math.png" width="95%"/>
 </p>
 
 <p align="center">
-  <img src="figs/table2_code.png" width="80%"/>
-  <br/><sub><b>Table 2.</b> Code benchmarks (Mean@16).</sub>
+  <img src="assets/table2_code.png" width="80%"/>
 </p>
 
 <p align="center">
-  <img src="figs/table3_math.png" width="95%"/>
-  <br/><sub><b>Table 3.</b> Reusability of proxy update signals.</sub>
+  <img src="assets/table3_math.png" width="95%"/>
 </p>
 
 <p align="center">
-  <img src="figs/table4_transitivity.png" width="90%"/>
-  <br/><sub><b>Table 4.</b> Transitivity of proxy update signals.</sub>
+  <img src="assets/table4_transitivity.png" width="90%"/>
 </p>
 
 <p align="center">
-  <img src="figs/sensitivity_analysis.png" width="70%"/>
-  <br/><sub><b>Figure 4.</b> Sensitivity to proxy model and calibration coefficient λ.</sub>
+  <img src="assets/sensitivity_analysis.png" width="70%"/>
 </p>
 
 Performance peaks at $\lambda^* \approx 1.51$ for the 1.7B proxy and $\lambda^* \approx 1.08$ for the 4B proxy. Both optima exceed 1.0, indicating that proxy signals should be down-scaled to avoid over-updating; the stronger 4B proxy also achieves a higher peak.
@@ -97,4 +90,6 @@ Our training and evaluation code builds upon the following open-source projects:
 - <a href="https://github.com/RUCBM/G-OPD"><b><u>G-OPD</u></b></a> — Generalized On-Policy Distillation framework for post-training and evaluation
 - <a href="https://github.com/volcengine/verl"><b><u>verl</u></b></a> — Volcano Engine Reinforcement Learning framework for LLMs (the base of G-OPD)
 
-> 🚀 **Code release:** coming soon.
+## 🚀 Code release
+
+We will open our code and data in two weeks.
