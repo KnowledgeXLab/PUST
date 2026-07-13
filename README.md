@@ -35,7 +35,7 @@ $$\Delta_\theta(a \mid s_t) = \log \frac{\pi_\theta(a \mid s_t)}{\pi_{\mathrm{re
 
 The calibration coefficient $\lambda$ prevents the primary model from repeatedly over-applying a static proxy signal:
 
-$$r_\lambda(a \mid s_t) = \Delta_\phi(a \mid s_t) - \lambda \, \Delta_\theta(a \mid s_t)$$
+$$r_\lambda(a \mid s_t) = \Delta_\phi(a \mid s_t) - \lambda  \Delta_\theta(a \mid s_t)$$
 
 The primary model is optimized with:
 
