@@ -1,6 +1,23 @@
 # Proxy Exploration and Reusable Guidance: A Modular Post-Training Paradigm via Proxy-Guided Update Signals
 
+<p align="center">
+  <a href="https://huggingface.co/KnowledgeXLab/PUST-Experiments">
+    <img src="https://huggingface.co/datasets/huggingface/badges/resolve/main/model-on-hf-sm.svg" alt="Hugging Face Models"/>
+  </a>
+</p>
+
 PUST decouples LLM post-training into three stages: **proxy exploration** → **update-signal extraction** → **signal transfer**. A lightweight proxy model performs low-cost trial-and-error, while the primary model aligns to relative improvement signals—enabling asynchronous, reusable, and weak-to-strong cross-model post-training.
+
+## Model Weights
+
+Pre-trained GRPO checkpoints from our experiments are available on <a href="https://huggingface.co/KnowledgeXLab/PUST-Experiments"><img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" width="20" height="20" align="absmiddle"/> Hugging Face</a>:
+
+| Model | Description |
+|-------|-------------|
+| [`Qwen3-1.7B-Math-GRPO-Steps500`](https://huggingface.co/KnowledgeXLab/PUST-Experiments/tree/main/Qwen3-1.7B-Math-GRPO-Steps500) | 1.7B proxy model, GRPO-trained on DeepMath-103K for 500 steps |
+| [`Qwen3-1.7B-Math-GRPO-Steps800`](https://huggingface.co/KnowledgeXLab/PUST-Experiments/tree/main/Qwen3-1.7B-Math-GRPO-Steps800) | 1.7B proxy model, GRPO-trained on DeepMath-103K for 800 steps |
+| [`Qwen3-8B-Math-GRPO-Steps400`](https://huggingface.co/KnowledgeXLab/PUST-Experiments/tree/main/Qwen3-8B-Math-GRPO-Steps400) | 8B primary model, GRPO-trained on DeepMath-103K for 400 steps |
+
 
 <p align="center">
   <img src="figs/pipeline_v2.png" width="90%"/>
