@@ -7,7 +7,7 @@
   <a href="https://huggingface.co/KnowledgeXLab/PUST-Experiments">
     <img src="https://huggingface.co/datasets/huggingface/badges/resolve/main/model-on-hf-sm.svg" alt="Hugging Face Models"/>
   </a>
-  <a href="assest/view.pdf">
+  <a href="assets/view.pdf">
     <img src="https://img.shields.io/badge/PDF-in-red?style=flat-square&logo=adobeacrobatreader&logoColor=white" alt="PDF in"/>
   </a>
 </p>
