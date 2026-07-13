@@ -18,7 +18,19 @@ The core update signal is the relative improvement of the proxy policy:
 
 $$\Delta_\phi(a \mid s_t) = \log \frac{\pi_\phi^+(a \mid s_t)}{\pi_\phi(a \mid s_t)}$$
 
-During transfer, a calibration coefficient $\lambda$ penalizes over-updating on the primary model. See Section 3 of the paper for details.
+During signal transfer, we measure how much the primary model has already absorbed via the anchor log-ratio:
+
+$$\Delta_\theta(a \mid s_t) = \log \frac{\pi_\theta(a \mid s_t)}{\pi_{\mathrm{ref}}(a \mid s_t)}$$
+
+The token-level transferred utility with calibration coefficient $\lambda$ is:
+
+$$r_\lambda(a \mid s_t) = \Delta_\phi(a \mid s_t) - \lambda \, \Delta_\theta(a \mid s_t)$$
+
+Equivalently, the primary model is optimized by minimizing:
+
+$$\mathcal{L}_{\mathrm{proxy}}(\theta) = -\mathbb{E}_{s_t \sim \mathcal{D}} \left[ \sum_{a \in \mathcal{V}} \pi_\theta(a \mid s_t) \left( \log \frac{\pi_\phi^+(a \mid s_t)}{\pi_\phi(a \mid s_t)} - \lambda \log \frac{\pi_\theta(a \mid s_t)}{\pi_{\mathrm{ref}}(a \mid s_t)} \right) \right]$$
+
+Here $\pi_\phi$, $\pi_\phi^+$, and $\pi_{\mathrm{ref}}$ are frozen; only the primary policy $\pi_\theta$ is updated. A larger $\lambda$ applies a stronger penalty against deviating from the anchor, yielding more conservative transfer.
 
 ## Results
 
