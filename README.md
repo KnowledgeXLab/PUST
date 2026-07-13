@@ -2,7 +2,7 @@
   <h1 align="center">PUST</h1>
   <h3 align="center">Proxy-Guided Update Signal Transfer for LLM Post-Training</h3>
   <p align="center">
-    
+    Decoupling exploration from alignment for asynchronous, reusable, and cross-model post-training.
   </p>
   <a href="https://huggingface.co/KnowledgeXLab/PUST-Experiments">
     <img src="https://huggingface.co/datasets/huggingface/badges/resolve/main/model-on-hf-sm.svg" alt="Hugging Face Models"/>
@@ -22,7 +22,7 @@
 
 <p align="center">
   <img src="figs/method.png" width="85%"/>
-  <br/><sub><b>Figure 3.</b> Overview of PUST.</sub>
+  <br/><sub><b>Figure 3.</b> Illustration of the PUST mechanism. This pipeline decouples exploration from alignment via three sequential stages. First, a relative update signal is extracted from the explored proxy model pair. Next, to prevent over-updating, the signal is dynamically calibrated against the primary model's anchor. Finally, the calibrated signal is transferred to guide the primary model's alignment, ensuring stable and flexible policy optimization.</sub>
 </p>
 
 PUST extracts the relative improvement between the initial and optimized proxy policies:
