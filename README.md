@@ -2,7 +2,7 @@
   <h1 align="center">PUST</h1>
   <h3 align="center">Proxy-Guided Update Signal Transfer for LLM Post-Training</h3>
   <p align="center">
-    Decoupling exploration from alignment for asynchronous, reusable, and cross-model post-training.
+    Comparison of post-training pipelines. (a) Serial: Sequential domain exploration, risking catastrophic forgetting. (b) Parallel: Parallel domain exploration followed by unified policy alignment. (c) Proxy Asynchronous (Ours): A proxy model conducts asynchronous exploration; extracted signals are subsequently transferred to various primary models. Decoupling these update signals from the base model enables seamless propagation and reuse.
   </p>
   <a href="https://huggingface.co/KnowledgeXLab/PUST-Experiments">
     <img src="https://huggingface.co/datasets/huggingface/badges/resolve/main/model-on-hf-sm.svg" alt="Hugging Face Models"/>
