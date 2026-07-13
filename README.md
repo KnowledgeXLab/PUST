@@ -7,6 +7,9 @@
   <a href="https://huggingface.co/KnowledgeXLab/PUST-Experiments">
     <img src="https://huggingface.co/datasets/huggingface/badges/resolve/main/model-on-hf-sm.svg" alt="Hugging Face Models"/>
   </a>
+  <a href="assest/view.pdf">
+    <img src="https://img.shields.io/badge/PDF-in-red?style=flat-square&logo=adobeacrobatreader&logoColor=white" alt="PDF in"/>
+  </a>
 </p>
 
 > 💡 PUST decouples LLM post-training into **proxy exploration** → **update-signal extraction** → **signal transfer**. A lightweight proxy performs low-cost trial-and-error, while the primary model aligns to relative improvement signals.
