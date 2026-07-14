@@ -1,21 +1,18 @@
-<p align="center">
-  <h1 align="center">PUST</h1>
-  <h3 align="center">Proxy-Guided Update Signal Transfer for LLM Post-Training</h3>
-  <p align="center">
-    Decoupling exploration from alignment for asynchronous, reusable, and cross-model post-training.
-  </p>
-  <a href="https://arxiv.org/abs/2607.11505">
-    <img src="https://img.shields.io/badge/arXiv-2607.11505-b31b1b?logo=arxiv&logoColor=white" alt="arXiv Paper"/>
-  </a>
+<div align="center">
+
+<h1>PUST</h1>
+<h3>Proxy-Guided Update Signal Transfer for LLM Post-Training</h3>
+<p>Decoupling exploration from alignment for asynchronous, reusable, and cross-model post-training.</p>
+
+<p>
+  <a href="https://arxiv.org/abs/2607.11505"><img src="https://img.shields.io/badge/arXiv-2607.11505-b31b1b?style=flat-square&logo=arxiv&logoColor=white" height="28" alt="arXiv Paper"/></a>
   &nbsp;
-  <a href="https://huggingface.co/KnowledgeXLab/PUST-Experiments">
-    <img src="https://huggingface.co/datasets/huggingface/badges/resolve/main/model-on-hf-sm.svg" alt="Hugging Face Models"/>
-  </a>
+  <a href="https://huggingface.co/KnowledgeXLab/PUST-Experiments"><img src="https://img.shields.io/badge/Models-HuggingFace-FFD21E?style=flat-square&logo=huggingface&logoColor=yellow" height="28" alt="Hugging Face Models"/></a>
   &nbsp;
-  <a href="assets/PUST.pdf">
-    <img src="https://img.shields.io/badge/PDF-in-red?style=flat-square&logo=adobeacrobatreader&logoColor=white" alt="PDF in"/>
-  </a>
+  <a href="assets/PUST.pdf"><img src="https://img.shields.io/badge/PDF-Paper-red?style=flat-square&logo=adobeacrobatreader&logoColor=white" height="28" alt="PDF Paper"/></a>
 </p>
+
+</div>
 
 > 💡 PUST decouples LLM post-training into **proxy exploration** → **update-signal extraction** → **signal transfer**. A lightweight proxy performs low-cost trial-and-error, while the primary model aligns to relative improvement signals.
 
