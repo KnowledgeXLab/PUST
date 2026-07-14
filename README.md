@@ -4,9 +4,14 @@
   <p align="center">
     Decoupling exploration from alignment for asynchronous, reusable, and cross-model post-training.
   </p>
+  <a href="https://arxiv.org/abs/2607.11505">
+    <img src="https://img.shields.io/badge/arXiv-2607.11505-b31b1b?logo=arxiv&logoColor=white" alt="arXiv Paper"/>
+  </a>
+  &nbsp;
   <a href="https://huggingface.co/KnowledgeXLab/PUST-Experiments">
     <img src="https://huggingface.co/datasets/huggingface/badges/resolve/main/model-on-hf-sm.svg" alt="Hugging Face Models"/>
   </a>
+  &nbsp;
   <a href="assets/PUST.pdf">
     <img src="https://img.shields.io/badge/PDF-in-red?style=flat-square&logo=adobeacrobatreader&logoColor=white" alt="PDF in"/>
   </a>
